@@ -5,7 +5,7 @@ COMPATIBLE_MACHINE = "beagleboard|omap3-multi|overo"
 
 require linux.inc
 
-MUSB_MODE ?= "host"
+MUSB_MODE ?= "peripheral"
 
 SRCREV = "cb89736af28f583598e49a05249334a194d00f1d"
 
@@ -18,7 +18,7 @@ SRC_URI = "git://www.sakoman.com/git/linux-omap-2.6.git;branch=omap3-2.6.34;prot
           "
 
 SRC_URI_append = " \
-           file://${BOOT_SPLASH} \
+            file://no-lcd-gpio.patch;apply=yes \
            "
 
 do_configure_prepend() {

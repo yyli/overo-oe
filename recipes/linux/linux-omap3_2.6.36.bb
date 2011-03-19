@@ -12,8 +12,6 @@ SRCREV = "83ae3fe304548ab234e73ec116554d7c3b8e2f91"
 SRC_URI = "git://www.sakoman.com/git/linux-omap-2.6.git;branch=omap-2.6.36;protocol=git \
 	   file://defconfig \
            file://${BOOT_SPLASH} \
-           file://spidev-default-speed.patch \
-           file://no-toggle-gpio-144-145.patch \
            "
 
 MUSB_MODE ?= "peripheral"

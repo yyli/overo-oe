@@ -18,7 +18,8 @@ ANGSTROM_EXTRA_INSTALL ?= "\
             openssh-sftp \
             openssh-scp \
             tcpdump \
-            customstuff \
+            diethotplug \
+	    customstuff \
 	    "
 
 IMAGE_PREPROCESS_COMMAND = "create_etc_timestamp"

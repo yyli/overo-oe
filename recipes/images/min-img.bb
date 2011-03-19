@@ -18,7 +18,7 @@ ANGSTROM_EXTRA_INSTALL ?= "\
             openssh-sftp \
             openssh-scp \
             tcpdump \
-            diethotplug \
+            linux-hotplug \
 	    customstuff \
 	    "
 

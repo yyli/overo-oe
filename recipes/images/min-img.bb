@@ -13,6 +13,7 @@ ANGSTROM_EXTRA_INSTALL ?= "\
 	    kernel-module-lib80211 \
 	    libertas-sd-firmware \
 	    wireless-tools \
+	    openntpd \
 	    devmem2 \
             openssh-ssh \
             openssh-sftp \

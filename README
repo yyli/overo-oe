@@ -1,2 +1,12 @@
-This is my base minimal branch for building a quick booting Gumstix
-Overo image. 
+Testing grounds for the gumstix image for the helicopter.
+
+Contains the following:
+
+Wifi-No WPA/WEP connection
+SPI
+I2C
+SERIAL
+OPENNTPD-Required for syncing with servers
+OPENSSH-Required to remotely access the gumstix onboard
+
+*more to be added as seen fit

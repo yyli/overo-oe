@@ -15,12 +15,13 @@ ANGSTROM_EXTRA_INSTALL ?= "\
 	    wireless-tools \
 	    openntpd \
 	    devmem2 \
-            openssh-ssh \
-            openssh-sftp \
-            openssh-scp \
-            tcpdump \
-            linux-hotplug \
-	    customstuff \
+        openssh-ssh \
+        openssh-sftp \
+        openssh-scp \
+        tcpdump \
+        linux-hotplug \
+	    termcap \
+		customstuff \
 	    "
 
 IMAGE_PREPROCESS_COMMAND = "create_etc_timestamp"

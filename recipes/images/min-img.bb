@@ -20,7 +20,7 @@ ANGSTROM_EXTRA_INSTALL ?= "\
         openssh-scp \
         tcpdump \
         linux-hotplug \
-	    termcap \
+	    ncurses-terminfo \
 		customstuff \
 	    "
 

@@ -6,7 +6,9 @@ Wifi-No WPA/WEP connection
 SPI
 I2C
 SERIAL
-OPENNTPD-Required for syncing with servers
+NTP
+NTPDATE
+SCREEN-running things if wifi were to drop
 OPENSSH-Required to remotely access the gumstix onboard
 
 *more to be added as seen fit

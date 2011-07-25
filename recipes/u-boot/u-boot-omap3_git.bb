@@ -9,7 +9,7 @@ PR = "r1"
 
 SRC_URI = "git://git.denx.de/u-boot.git;branch=master;protocol=git \
 	   file://expansion.patch \
-           file://overo-gpio10.patch \
+       file://overo-gpio10.patch \
 	   file://pin-mux.patch \
 	  "
 

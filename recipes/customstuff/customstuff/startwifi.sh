@@ -4,9 +4,8 @@ CHECK_FIRST=`grep "auto wlan0" /etc/network/interfaces`
 if [ "$CHECK_FIRST" == "" ]
 then
 	echo "initial boot"
-	echo -e "auto wlan0\niface wlan0 inet dhcp\nwireless_mode managed\nwireless_essid NETGEAR" >> /etc/network/interfaces	
+	echo -e "auto wlan0\niface wlan0 inet dhcp" >> /etc/network/interfaces	
 fi
-
 
 echo "Loading Drivers"
 modprobe libertas_sdio

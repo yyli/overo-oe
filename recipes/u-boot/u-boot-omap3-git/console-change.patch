@@ -1,0 +1,26 @@
+diff --git git/include/configs/omap3_overo.h.blk git/include/configs/omap3_overo.h
+index 051e74d..2be20ca 100644
+--- git/include/configs/omap3_overo.h.blk
++++ git/include/configs/omap3_overo.h
+@@ -78,9 +78,9 @@
+ /*
+  * select serial console configuration
+  */
+-#define CONFIG_CONS_INDEX		3
+-#define CONFIG_SYS_NS16550_COM3		OMAP34XX_UART3
+-#define CONFIG_SERIAL3			3
++#define CONFIG_CONS_INDEX		1
++#define CONFIG_SYS_NS16550_COM1		OMAP34XX_UART1
++#define CONFIG_SERIAL1			1
+ 
+ /* allow to overwrite serial and ethaddr */
+ #define CONFIG_ENV_OVERWRITE
+@@ -154,7 +154,7 @@
+ 
+ #define CONFIG_EXTRA_ENV_SETTINGS \
+ 	"loadaddr=0x82000000\0" \
+-	"console=ttyS2,115200n8\0" \
++	"console=ttyS0,115200n8\0" \
+ 	"mpurate=500\0" \
+ 	"vram=12M\0" \
+ 	"dvimode=1024x768MR-16@60\0" \

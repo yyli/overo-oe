@@ -4,19 +4,25 @@ CHECK_FIRST=`grep "auto wlan0" /etc/network/interfaces`
 if [ "$CHECK_FIRST" == "" ]
 then
 	echo "initial boot"
-	echo -e "auto wlan0\niface wlan0 inet dhcp" >> /etc/network/interfaces	
+	echo -e "auto wlan0\niface wlan0 inet dhcp" >> /etc/network/interfaces  
 fi
+
+
+DEVICE="wlan0"
+ROUTER_NAME="hovercraft"
+IP="192.168.0.121"
 
 echo "Loading Drivers"
 modprobe libertas_sdio
-ifconfig wlan0 down > /dev/null 2>&1
-ifconfig wlan0 up > /dev/null 2>&1
 
 echo "Starting Wifi"
-iwlist scan > /dev/null 2>&1
-CHECK_LEASE=`/etc/init.d/networking restart | grep "Lease of"`    
+CHECK_LEASE=`ping 192.168.0.1 -w 3 | grep time`
 while [ "$CHECK_LEASE" == "" ]; do
-        CHECK_LEASE=`/etc/init.d/networking restart | grep "Lease of"`
-        echo failed trying again CTRL-C to stop
+	echo Not connected - Trying to connect again CTRL-C to stop
+	sleep 2
+	iwlist $DEVICE scan > /dev/null 2>&1
+	iwconfig $DEVICE mode managed essid $ROUTER_NAME
+	ifconfig $DEVICE $IP up
+	CHECK_LEASE=`ping 192.168.0.1 -w 3 | grep time`
 done
-echo $CHECK_LEASE
+nohup sh /etc/init.d/checkwifi.sh &

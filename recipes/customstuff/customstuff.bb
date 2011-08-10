@@ -1,5 +1,6 @@
 DESCRIPTION = "Custom Changes"
 LICENSE = "unknown"
+RDEPENDS="sed"
 
 SRC_URI = "file://inshp.sh \
            file://disprintk.sh \

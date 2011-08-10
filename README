@@ -1,4 +1,6 @@
-Testing grounds for the gumstix image for the helicopter.
+Solarbubbles Overo gumstix build environment
+Yiying Li @ University of Michigan 2011 yyli@umich.edu
+
 
 Contains the following:
 
@@ -8,7 +10,10 @@ I2C
 SERIAL
 NTP
 NTPDATE
-SCREEN-running things if wifi were to drop
-OPENSSH-Required to remotely access the gumstix onboard
+SCREEN -running things if wifi were to drop
+OPENSSH - Required to remotely access the gumstix onboard
+NCURSES-LIB - for visuals
+
+PINS muxed to specific places
 
 *more to be added as seen fit

@@ -1,6 +1,10 @@
 Solarbubbles Overo gumstix build environment
 Yiying Li @ University of Michigan 2011 yyli@umich.edu
 
+To build image run:
+bitbake sb-img
+To build u-boot run:
+bitbake virtual/bootloader
 
 Contains the following:
 

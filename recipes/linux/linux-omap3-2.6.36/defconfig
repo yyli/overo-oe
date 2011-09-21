@@ -1028,7 +1028,7 @@ CONFIG_SPI_OMAP24XX=y
 #
 # SPI Protocol Masters
 #
-CONFIG_SPI_SPIDEV=y
+# CONFIG_SPI_CONFIG is not set
 # CONFIG_SPI_TLE62X0 is not set
 
 #
